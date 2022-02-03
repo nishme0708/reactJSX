@@ -1,17 +1,18 @@
+//import react and react dom
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//create react component
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = function() {
+    const submit = 'Submit b';
+    return (
+        <div>
+            <label htmlFor="name" className='label' >Enter text</label>
+            <input type='text' id='name' />
+            <button style={{ backgroundColor: 'blue', color: 'white' }}>{submit}</button>
+        </div>
+    );
+};
+// take it and show on screen
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<App />, document.getElementById('root'));
